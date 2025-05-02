@@ -1,14 +1,49 @@
-# Node.js (React)
-frontend/node_modules/
-frontend/build/
-
-# Java (Spring Boot)
-backend/target/
-backend/.idea/
-backend/.vscode/
-backend/*.iml
-
-# Sistema
+# ========================
+# Geral
+# ========================
 .DS_Store
 Thumbs.db
 *.log
+.env
+*.env
+
+# IntelliJ / Eclipse
+.idea/
+*.iml
+*.ipr
+*.iws
+*.class
+*.swp
+.vscode/
+
+# ========================
+# Backend (Spring Boot)
+# ========================
+/backend/**/target/
+backend/**/logs/
+/backend/**/build/
+backend/**/.mvn/
+backend/**/mvnw
+backend/**/mvnw.cmd
+
+# Database e configurações sensíveis
+backend/**/application.properties
+backend/**/application.yml
+
+# ========================
+# Frontend (React)
+# ========================
+/frontend/**/node_modules/
+frontend/**/build/
+frontend/**/.env.local
+frontend/**/.env.development.local
+frontend/**/.env.test.local
+frontend/**/.env.production.local
+
+# ========================
+# Outros
+# ========================
+*.bak
+*.tmp
+*.old
+*.cache
