@@ -1,0 +1,14 @@
+# Node.js (React)
+frontend/node_modules/
+frontend/build/
+
+# Java (Spring Boot)
+backend/target/
+backend/.idea/
+backend/.vscode/
+backend/*.iml
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.log

@@ -1,0 +1,139 @@
+/* Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #F5F5F5; /* Cinza Claro */
+}
+
+/* Navbar */
+nav {
+  background-color: #00B388; /* Verde New Work */
+  color: white;
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Página de Dashboard */
+.dashboard-container {
+  padding: 100px 20px 40px;
+  text-align: center;
+}
+
+.metrics-table {
+  margin: 20px auto;
+  width: 80%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+.metrics-table th,
+.metrics-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.metrics-table th {
+  background-color: #f2f2f2;
+}
+
+/* Botão */
+.export-button-container {
+  margin-top: 40px;
+}
+
+.export-button {
+  background-color: #333333; /* Cinza Escuro */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.export-button:hover {
+  background-color: #00B388; /* Verde New Work */
+}
+/* src/styles/global.css */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.add-metric-container {
+  max-width: 600px;
+  margin: 100px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.metric-form label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.metric-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+
+.metric-form button {
+  background-color: #00c48c;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.metric-form button:hover {
+  background-color: #00866b;
+}
+
+.success-message {
+  color: #00c48c;
+  font-weight: bold;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}

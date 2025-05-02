@@ -1,0 +1,19 @@
+.dashboard {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 0;
+}
+
+.main-content {
+  margin-top: 20px;
+}
+
+h2 {
+  color: #333;
+}
