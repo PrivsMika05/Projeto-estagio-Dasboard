@@ -61,4 +61,10 @@ public class JwtUtil {
             return false;
         }
     }
+
+    // ✅ NOVO método para validar contra o UserDetails
+    public boolean validateToken(String token, UserDetails userDetails) {
+        final String username = extractUsername(token);
+        return (username.equals(userDetails.getUsername()) && validateToken(token));
+    }
 }

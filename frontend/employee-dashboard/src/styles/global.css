@@ -2,13 +2,14 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Arial", sans-serif;
-  background-color: #F5F5F5; /* Cinza Claro */
+  font-family: "Segoe UI", sans-serif;
+  background-color: #F5F5F5;
+  color: #333;
 }
 
 /* Navbar */
 nav {
-  background-color: #00B388; /* Verde New Work */
+  background-color: #00B388;
   color: white;
   padding: 16px;
   position: sticky;
@@ -65,7 +66,7 @@ nav ul li a:hover {
 }
 
 .export-button {
-  background-color: #333333; /* Cinza Escuro */
+  background-color: #333333;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -75,18 +76,10 @@ nav ul li a:hover {
 }
 
 .export-button:hover {
-  background-color: #00B388; /* Verde New Work */
-}
-/* src/styles/global.css */
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #00B388;
 }
 
+/* Página de Adição de Métricas */
 .add-metric-container {
   max-width: 600px;
   margin: 100px auto;
@@ -136,4 +129,72 @@ body {
   color: red;
   font-weight: bold;
   text-align: center;
+}
+
+/* Página de Login */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  background-color: #F5F5F5;
+}
+
+.login-logo {
+  position: absolute;
+  top: 20px;
+  left: 8px;
+  height: 110px;
+}
+
+
+.login-box {
+  width: 320px;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-box h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.login-box p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.login-box button {
+  width: 100%;
+  background-color: #004d40;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-box button:hover {
+  background-color: #00352d;
+}
+
+.login-error {
+  color: red;
+  margin-bottom: 10px;
 }

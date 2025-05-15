@@ -38,4 +38,13 @@ public class UserService {
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
     }
+
+    public Optional<User> findById(Long id) {
+        return userRepository.findById(id);
+    }
+    
+    public User save(User user) {
+        return userRepository.save(user);
+    }
+    
 }

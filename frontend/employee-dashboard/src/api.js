@@ -1,22 +1,10 @@
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:8080';
-
-// Criar instância com o token JWT
 const api = axios.create({
-  baseURL: API_BASE,
+  baseURL: 'http://localhost:8080',
+  withCredentials: true,
 });
 
-// Adiciona o token em todas as requisições automaticamente
-api.interceptors.request.use(config => {
-  const token = localStorage.getItem('token');
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-  return config;
-});
-
-// ----- Métricas -----
 export const getMetrics = async () => {
   try {
     const response = await api.get('/metrics');
@@ -33,17 +21,33 @@ export const updateMetric = (id, updatedMetric) => api.put(`/metrics/${id}`, upd
 
 // ----- Autenticação -----
 export const login = (credentials) => api.post('/auth/login', credentials);
-export const register = (user) => api.post('/users/create', user);
+export const logout = () => api.post('/auth/logout');
 
-// ----- Gestão de Utilizadores (Admin) -----
+export const register = (user) =>
+  axios.post('http://localhost:8080/users/create', user);
+
+// ⚠️ CORRIGIDO: Sempre retorna role
+export const checkAuth = async () => {
+  try {
+    const response = await api.get('/auth/check');
+    return { authenticated: true, role: response.data.role };
+  } catch (error) {
+    console.warn("Utilizador não autenticado ou token inválido:", error);
+    return { authenticated: false, role: null };
+  }
+};
+
 export const getAllUsers = async () => {
   try {
     const response = await api.get('/users');
     return response.data;
   } catch (error) {
     console.error("Erro ao buscar utilizadores:", error);
-    return []; // evita erro .map is not a function
+    return [];
   }
 };
+
+export const updateUserRole = (id, role) =>
+  api.put(`/users/${id}/role`, { role });
 
 export const deleteUser = (id) => api.delete(`/users/${id}`);
